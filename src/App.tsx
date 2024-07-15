@@ -44,44 +44,27 @@ import "@ionic/react/css/palettes/dark.system.css";
 
 /* Theme variables */
 import "./theme/variables.css";
+import Login from "./pages/Login";
+import TabsContainer from "./pages/TabsContainer";
 
 setupIonicReact();
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonTabs>
+const App: React.FC = () => {
+  const isLoggedIn = false; // Replace with your actual auth check
+
+  return (
+    <IonApp>
+      <IonReactRouter>
         <IonRouterOutlet>
-          <Route exact path="/tab1">
-            <Tab1 />
-          </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
-          </Route>
-          <Route path="/tab3">
-            <Tab3 />
-          </Route>
+          <Route exact path="/login" component={Login} />
+          <Route path="/tabs" component={TabsContainer} />
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to={isLoggedIn ? "/tabs" : "/login"} />
           </Route>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon aria-hidden="true" icon={people} />
-            <IonLabel>Contacts</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon aria-hidden="true" icon={barChart} />
-            <IonLabel>Leads</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={mailUnread} />
-            <IonLabel>Updates</IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
-    </IonReactRouter>
-  </IonApp>
-);
+      </IonReactRouter>
+    </IonApp>
+  );
+};
 
 export default App;
