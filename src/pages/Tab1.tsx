@@ -1,11 +1,8 @@
 import {
   IonAvatar,
-  IonButton,
-  IonButtons,
   IonContent,
   IonFab,
   IonFabButton,
-  IonFabList,
   IonHeader,
   IonIcon,
   IonItem,
@@ -19,16 +16,8 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import ExploreContainer from "../components/ExploreContainer";
 import "./Tab1.css";
-import {
-  add,
-  chevronUpCircle,
-  colorPalette,
-  create,
-  globe,
-  image,
-} from "ionicons/icons";
+import { add } from "ionicons/icons";
 
 const Tab1: React.FC = () => {
   return (
