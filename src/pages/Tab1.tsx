@@ -1,7 +1,13 @@
 import {
   IonAvatar,
+  IonButton,
+  IonButtons,
   IonContent,
+  IonFab,
+  IonFabButton,
+  IonFabList,
   IonHeader,
+  IonIcon,
   IonItem,
   IonItemOption,
   IonItemOptions,
@@ -15,6 +21,14 @@ import {
 } from "@ionic/react";
 import ExploreContainer from "../components/ExploreContainer";
 import "./Tab1.css";
+import {
+  add,
+  chevronUpCircle,
+  colorPalette,
+  create,
+  globe,
+  image,
+} from "ionicons/icons";
 
 const Tab1: React.FC = () => {
   return (
@@ -301,6 +315,22 @@ const Tab1: React.FC = () => {
           </IonItemSliding>
         </IonList>
       </IonContent>
+      <IonFab slot="fixed" vertical="bottom" horizontal="end">
+        <IonFabButton>
+          <IonIcon icon={add}></IonIcon>
+        </IonFabButton>
+        {/* <IonFabList side="top">
+          <IonFabButton>
+            <IonIcon icon={image}></IonIcon>
+          </IonFabButton>
+          <IonFabButton>
+            <IonIcon icon={colorPalette}></IonIcon>
+          </IonFabButton>
+          <IonFabButton>
+            <IonIcon icon={globe}></IonIcon>
+          </IonFabButton>
+        </IonFabList> */}
+      </IonFab>
     </IonPage>
   );
 };
