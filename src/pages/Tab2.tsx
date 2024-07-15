@@ -1,4 +1,6 @@
 import {
+  IonAvatar,
+  IonChip,
   IonContent,
   IonHeader,
   IonItem,
@@ -10,8 +12,9 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import ExploreContainer from "../components/ExploreContainer";
 import "./Tab2.css";
+import Moment from "react-moment";
+import moment from "moment";
 
 const Tab2: React.FC = () => {
   return (
@@ -27,25 +30,82 @@ const Tab2: React.FC = () => {
             <IonTitle size="large">My Leads</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonItemSliding>
-          <IonItem>
-            <IonLabel>Pokémon Yellow</IonLabel>
-          </IonItem>
-          <IonItemOptions>
-            <IonItemOption>Share</IonItemOption>
-          </IonItemOptions>
-        </IonItemSliding>
+
         <IonItem>
-          <IonLabel>Mega Man X</IonLabel>
+          <IonAvatar slot="start">
+            <img
+              alt="Silhouette of a person's head"
+              src="https://randomuser.me/api/portraits/men/56.jpg"
+            />
+          </IonAvatar>
+          <IonLabel>
+            <h3>
+              Bernardo Soto
+              <IonChip class="float-right">
+                {moment("2024-07-14T00:00:00").fromNow()}
+              </IonChip>
+            </h3>
+            <p>HVAC Supplier</p>
+            <p>masked****@email.com</p>
+            <p>+971-5*******</p>
+          </IonLabel>
         </IonItem>
         <IonItem>
-          <IonLabel>The Legend of Zelda</IonLabel>
+          <IonAvatar slot="start">
+            <img
+              alt="Silhouette of a person's head"
+              src="https://randomuser.me/api/portraits/men/46.jpg"
+            />
+          </IonAvatar>
+          <IonLabel>
+            <h3>
+              Hugo Barnett
+              <IonChip class="float-right">
+                {moment("2024-07-10T00:00:00").fromNow()}
+              </IonChip>
+            </h3>
+            <p>HVAC Supplier</p>
+            <p>masked****@email.com</p>
+            <p>+971-5*******</p>
+          </IonLabel>
         </IonItem>
         <IonItem>
-          <IonLabel>Pac-Man</IonLabel>
+          <IonAvatar slot="start">
+            <img
+              alt="Silhouette of a person's head"
+              src="https://randomuser.me/api/portraits/men/63.jpg"
+            />
+          </IonAvatar>
+          <IonLabel>
+            <h3>
+              Hollis Herrera
+              <IonChip class="float-right">
+                {moment("2024-06-14T00:00:00").fromNow()}
+              </IonChip>
+            </h3>
+            <p>HVAC Supplier</p>
+            <p>masked****@email.com</p>
+            <p>+971-5*******</p>
+          </IonLabel>
         </IonItem>
         <IonItem>
-          <IonLabel>Super Mario World</IonLabel>
+          <IonAvatar slot="start">
+            <img
+              alt="Silhouette of a person's head"
+              src="https://randomuser.me/api/portraits/men/67.jpg"
+            />
+          </IonAvatar>
+          <IonLabel>
+            <h3>
+              Bernardo Soto
+              <IonChip class="float-right">
+                {moment("2024-05-14T00:00:00").fromNow()}
+              </IonChip>
+            </h3>
+            <p>HVAC Supplier</p>
+            <p>masked****@email.com</p>
+            <p>+971-5*******</p>
+          </IonLabel>
         </IonItem>
       </IonContent>
     </IonPage>
