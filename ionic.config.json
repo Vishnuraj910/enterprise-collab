@@ -1,0 +1,7 @@
+{
+  "name": "Enterprise Collab ",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
